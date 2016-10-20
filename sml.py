@@ -1,6 +1,6 @@
 import tweepy
 from tweepy import OAuthHandler
- 
+#below mentioned four attributes can be obtained from a twitter account 
 consumer_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
@@ -31,9 +31,4 @@ class MyListener(StreamListener):
 twitter_stream = Stream(auth, MyListener())
 print('Enter hashtag to be extracted')
 str1= input()
-twitter_stream.filter(languages=["en"],track=[str1])  #languages=["en"] is for english tweets remove this if no language filter is required on tweets
-
-
-
-
-
+twitter_stream.filter(languages=["en"],track=[str1])  #languages=["en"] is for english tweets remove it if filter on language is not                                                                                                                                   required
